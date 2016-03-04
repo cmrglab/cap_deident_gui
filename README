@@ -1,6 +1,4 @@
-This is the repository for an GUI that will interface with the CAP
+This is the repository for a GUI that will interface with the CAP
 Deidentification software that will deidentify Dicom images.
 
-There might be more functionality added later, but for that we are just
-focusing on deidentifying Dicom images using the existing CAP
-deidentification software (written in Java).
+The GUI requires PySide and processdicom.
