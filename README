@@ -1,4 +1,7 @@
 This is the repository for a GUI that will interface with the CAP
 Deidentification software that will deidentify Dicom images.
 
-The GUI requires PySide and processdicom.
+The GUI requires PySide and the Python packages processdicom, dicom and natsort.
+
+Once the dependencies are installed you can run it via:
+python deident.py
