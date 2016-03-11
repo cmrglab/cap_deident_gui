@@ -161,14 +161,16 @@ class Features(QtGui.QWidget):
         self.num_existing_images = 0
         self.existing_file_names = ''
 
-        # Very Windows specific
         # Setting the default directoy when opening our file browser
         # otherwise, it starts from where ever the source files
         # are installed
-        self.default_dir = os.path.join(os.environ['SYSTEMDRIVE'] + os.path.sep,
-            "Users", 
-            os.environ['USERNAME'],
-            "Desktop")
+        if os.sys.platform == 'win32':
+            self.default_dir = os.path.join(os.environ['SYSTEMDRIVE'] + os.path.sep,
+                "Users", 
+                os.environ['USERNAME'],
+                "Desktop")
+        else:
+            self.default_dir = os.path.join(os.environ['HOME'] + "Desktop")
 
     def set_which_images_label(self, num_images):
         self.num_images_label.setText("Which images to deidentify (%s found)\n(Ex: 1-10 or 1,4,5, or 1-5,7,9)" % num_images)
